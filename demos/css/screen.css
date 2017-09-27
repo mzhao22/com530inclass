@@ -39,6 +39,18 @@ ul {
 ol {
   list-style-type: decimal;
 }
+li > ul;
+
+li > ol {
+  padding-top: 11px;
+  padding-left: 22px;
+  padding-bottom: 0;
+}
+
+li li {
+  padding-bottom: 0;
+}
+
 body {
   padding-top: 44px;
   padding-right: 22px;
