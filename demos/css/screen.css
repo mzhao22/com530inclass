@@ -11,12 +11,17 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
 html {
   font-size: 1.125em;
   line-height: 22px;
-  line-height: 1.22em;
+  line-height: 1.222em;
   text-rendering: optimizeLegibility;
   -moz-text-size-adjust:100%;
   -webkit-text-size-adjust:100%;
   -ms-text-size-adjust:100%;
   text-size-adjust:100%;
+}
+body {
+  padding-top: 66px;
+  padding-right: 22px;
+  padding-left: 22px;
 }
 
 h1,h1,h3,p,ul,ol{
@@ -28,8 +33,9 @@ li {
 }
 
 ul,ol {
-  padding-bottom: 11px;
-  color: red
+  padding-bottom: 0.611em; /* 11/18=0.611 */
+  padding-left: 1.2222em;
+  color: red;
 }
 
 ul {
@@ -39,20 +45,43 @@ ul {
 ol {
   list-style-type: decimal;
 }
+
 li > ul;
 
 li > ol {
-  padding-top: 11px;
-  padding-left: 22px;
+  padding-top: 0.611em;
+  padding-left: 1.2222em;
   padding-bottom: 0;
 }
 
-li li {
+li li:last-child {
   padding-bottom: 0;
 }
 
-body {
-  padding-top: 44px;
-  padding-right: 22px;
-  padding-left: 22px;
+
+
+/* layout */
+#navigation {
+  position:absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+#navigation li {
+  width: 33.333333%;
+  float: left;
+}
+/* modular */
+nav ul{
+  list-style-type: none;
+}
+nav a {
+  display: block;
+  padding-top: 0.611em;
+  padding-bottom: 0.611em;
+  background-color: orange;
+  text-align: center;
+  width: 100%;
+  text-decoration: none;
+
 }
