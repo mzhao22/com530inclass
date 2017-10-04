@@ -114,4 +114,34 @@ nav a {
 @media screen and (min-width: 920px) {
   body {
     padding-right: 3.2608396%; /* 30 / 920 = 0.032608396 */
-    padding-left: /* 30 / 920 = 0.032608396 */
+    padding-left: 3.2608396%; /* 30 / 920 = 0.032608396 */
+
+  }
+}
+
+
+#primary {
+  width: 65.9883721%; /* 567.5 / 860 = 0.659883721*/
+  float: left;
+}
+
+#supporting {
+  width: 31.9767422%; /* 275 / 860 = 0.319767422 */
+  margin-left: 2.0348837%; /* 17.5 / 860 = 0.020348837 */
+  float: left;
+  position: absolute;
+  top: 0;
+  left: 567.5px;
+}
+
+#footer {
+  clear:both;
+  float: none;
+}
+
+@media screen and (min-width: 1185px) {
+    body{
+      padding-right: 20%
+      padding-left: 20%
+    }
+}
