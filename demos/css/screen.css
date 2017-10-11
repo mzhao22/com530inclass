@@ -7,52 +7,47 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
 /* stylelint-enable */
 
 /* Begin site styles below */
-
-/* Base */
 /*
   Using an 18/22 base typographic setting, according to a 4:3 modular scale
   http://www.modularscale.com/?18&px&1.333
 */
-
 html {
-  font-size: 1.125em; /* 18 / 16 = 1.125 */
-  line-height: 1.222em; /* 22 / 18 = 1.222 */
+  font-size: 1.125em; /* 18 / 16 = 1.125*/
+  line-height: 1.222em; /* 22 /18 = 1.222 */
+
   text-rendering: optimizeLegibility;
   -moz-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
   text-size-adjust: 100%;
 }
+
 body {
   padding-top: 3.666em; /* 66 / 18 = 3.666 */
-  padding-right: 1.222em; /* 22 / 18 = 1.222 */
-  padding-left: 1.222em; /* 22 / 18 = 1.222 */
+  padding-left: 1.222em; /* 22 /18 = 1.222 */
+  padding-right: 1.222em; /* 22 /18 = 1.222 */
 }
 
-h1,h2,h3,p,ol,ul {
-  padding-bottom: 1.222em;
+h1,h2,h3,p {
+  padding-bottom: 1.222em; /* 22 /18 = 1.222 */
 }
 
 h1 {
   color: #666;
 }
-
 h2 {
   font-size: 1.777em; /* 31.984 / 18 = 1.777 */
   line-height: 1.0318em; /* 33 / 31.984 = 1.0318 */
   padding-bottom: 0.689em; /* 22 / 31.984 = 0.689 */
 }
-
 h3 {
   font-weight: bold;
-  padding-top: 1.222em; /* 22 / 18 = 1.222 */
+  padding-top: 1.222em; /* 22 /18 = 1.222 */
   padding-bottom: 0.611em; /* 11 / 18 = 0.611 */
 }
-
 li {
   padding-bottom: 0.611em; /* 11 / 18 = 0.611 */
 }
-
 ul,ol {
   padding-bottom: 0.611em; /* 11 / 18 = 0.611 */
   color: red;
@@ -68,16 +63,15 @@ ol {
 
 li > ul,
 li > ol {
-  padding-top:  0.611em; /* 11 / 18 = 0.611 */
-  padding-left: 1.222em; /* 22 / 18 = 1.222 */
+  padding-left: 1.222em; /* 22 /18 = 1.222 */
+  padding-top: 0.611em; /* 11 / 18 = 0.611 */
   padding-bottom: 0;
 }
 
-li li:last-child {
+li li:last-child{
   padding-bottom: 0;
 }
 
-/* Layout */
 #navigation {
   position: absolute;
   top: 0;
@@ -85,63 +79,79 @@ li li:last-child {
   width: 100%;
 }
 
-#navigation li {
-  width: 33.333333%;
+#navigation li{
   float: left;
+  width: 33.333333%;
 }
 
-/* Modular */
+/*Modular*/
 nav ul {
   list-style-type: none;
 }
+
 nav a {
   display: block;
-  padding-top: 0.611em; /* 11 / 18 = 0.611 */
-  padding-bottom: 0.611em; /* 11 / 18 = 0.611 */
+  padding: 0.611em 0 0.611em 0;
   background-color: orange;
   text-align: center;
   text-decoration: none;
 }
 
-/* state */
-@media screen and (min-width: 720px;) {
-  body{
-    padding-right: 11.11111%; /* 80 / 720 = 0.111111111 */
-    padding-left: 11.11111%; /* 80 / 720 = 0.111111111 */
-  }
-}
-
-@media screen and (min-width: 920px) {
+/* State */
+@media screen and (min-width: 370px){
   body {
-    padding-right: 3.2608396%; /* 30 / 920 = 0.032608396 */
-    padding-left: 3.2608396%; /* 30 / 920 = 0.032608396 */
-
+    padding-left: 5.945946%; /* 22 / 370 = 0.05945946 */
+    padding-right: 5.945946%; /* 22 / 370 = 0.05945946 */
   }
 }
 
-
-#primary {
-  width: 65.9883721%; /* 567.5 / 860 = 0.659883721*/
-  float: left;
+@media screen and (min-width: 625px){
+  html {
+    font-size: 1.25em /* 20 / 16 = 1.25 */
+  }
 }
 
-#supporting {
-  width: 31.9767422%; /* 275 / 860 = 0.319767422 */
-  margin-left: 2.0348837%; /* 17.5 / 860 = 0.020348837 */
-  float: left;
-  position: absolute;
-  top: 0;
-  left: 567.5px;
+@media screen and (min-width: 720px){
+  body {
+    padding-left: 11.111111%; /* 80 / 720 = 0.11111111 */
+    padding-right: 11.111111%; /* 80 / 720 = 0.11111111 */
+  }
 }
 
-#footer {
-  clear:both;
-  float: none;
+@media screen and (min-width: 920px){
+  /*
+   920px / whole screen
+   -60px / margin(total)
+   275px / each column
+   17.5px / each gutter
+
+   left-hand column: 275px*2 + 17.5 = 567.5px;
+   right-hand column: 275px;
+  */
+  body {
+    padding-right: 3.2698696%;  /* 30 / 920 = 0.032698696 */
+    padding-left: 3.2698696%;  /* 30 / 920 = 0.032698696 */
+  }
+
+  #primary {
+    width: 65.988372%; /* 567.5 / 860 = 0.65988372*/
+    float: left;
+  }
+
+  #supporting {
+    width: 31.976744%; /* 275 / 860 = 0.31976744*/
+    float: left;
+    margin-left: 2.034884%; /* 17.5 / 860 = 0.02034884 */
+  }
+
+  #footer {
+    clear: both;
+  }
 }
 
-@media screen and (min-width: 1185px) {
-    body{
-      padding-right: 20%
-      padding-left: 20%
-    }
+@media screen and (min-width: 1185px){
+  body {
+    padding-left: 15%;
+    padding-right: 15%;
+  }
 }
