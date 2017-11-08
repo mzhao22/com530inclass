@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Responsive Images</title>
+    <meta charset="utf-8" />
+    <meta name="viewport"
+      content="width=device-width,initial-scale=1.0,shrink-to-fit=no" />
+    <link rel="stylesheet" href="css/screen.css" />
+    <link rel="stylesheet" href="#//basehold.it/22" />
+    <script src="js/modernizr.js"></script>
+  </head>
+  <body>
+    <main id="content">
+      <article id="primary">
+        <header>
+          <h1>Hank and Fanny: Dogs in the&nbsp;Yard</h1>
+        </header>
+        <figure class="photo">
+          <img
+            id="hank-and-fanny"
+            alt="Photo of Hank and Fanny on the grass."
+            srcset="images/hank-and-fanny-cropped-original.jpg 3264w,
+              images/hank-and-fanny-1200-30.jpg 1200w,
+              images/hank-and-fanny-960-30.jpg 960w,
+              images/hank-and-fanny-600-60.jpg 600w,
+              images/hank-and-fanny-480-60.jpg 480w,
+              images/hank-and-fanny-350-60.jpg 350w"
+            sizes="(min-width: 1020px) 75vw, (min-width: 650px) 55vw, 92vw"
+            src="images/hank-and-fanny-350-60.jpg" />
+          <figcaption>
+            <p class="description">
+              Hank and his best friend Fanny resting together on the grass after playing and racing
+              around the yard on a summer afternoon.
+            </p>
+          </figcaption>
+        </figure>
+        <footer>
+          <small>Photo by Karl Stolley.</small>
+        </footer>
+      </article>
+    </main>
+    <script src="js/image-src.js"></script>
+  </body>
+</html>
