@@ -139,12 +139,24 @@ video.portrait {
 
 .js abbr[title] {
   cursor: pointer;
+  background-color: yellow;
+  text-decoration: none;
 }
 
 abbr[title].expanded {
   cursor: unset;
   text-decoration: none;
   border-bottom: 0;
+}
+
+abbr[title].is-expanded {
+  cursor: unset;
+  background-color: inherit;
+}
+
+.is-faded-out {
+  transition: opacity 0.5s;
+  opacity: 0;
 }
 
 .hide {
